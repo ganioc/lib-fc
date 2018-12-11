@@ -7,7 +7,6 @@
 #include <fc/utility.hpp>
 
 using namespace std;
-using namespace myfc;
 using namespace fc;
 using namespace fc::crypto;
 
