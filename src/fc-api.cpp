@@ -46,7 +46,7 @@ void Sign_k1(const Nan::FunctionCallbackInfo<v8::Value> &info)
 
   digest = fc::sha256::hash(str);
 
-  cout << "<< " << std::string(digest) << endl;
+  // cout << "<< " << std::string(digest) << endl;
 
   auto sig = privateKey.sign(digest, true);
 
