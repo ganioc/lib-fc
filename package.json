@@ -1,0 +1,29 @@
+{
+  "name": "lib-fc",
+  "version": "1.0.0",
+  "description": "It's a js wrapper for EOS/library/fc ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganioc/lib-fc.git"
+  },
+  "keywords": [
+    "EOS",
+    "EOSIO",
+    "Sign",
+    "sign_k1"
+  ],
+  "author": "Ganioc <ganioc.yang@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ganioc/lib-fc/issues"
+  },
+  "homepage": "https://github.com/ganioc/lib-fc#readme",
+  "dependencies": {
+    "bindings": "^1.3.1",
+    "nan": "^2.11.1"
+  }
+}
