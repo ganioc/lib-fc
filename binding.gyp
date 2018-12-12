@@ -55,6 +55,7 @@
                         "include_dirs": [
                             "lib/fc/include/",
                             "/usr/include",
+                            "/usr/local/ssl/include",
                             "<!(node -e \"require('nan')\")"
                         ],
                         "cflags!": ["-fno-exceptions"],
@@ -65,9 +66,11 @@
                             "-Wall"
                         ],
                         "libraries":[
-                            "-L/Users/junyang/Documents/yangjun/project/gnuc/node-binding/test/lib/fc/build",
-                            "-L/Users/junyang/Documents/yangjun/project/gnuc/node-binding/test/lib/fc/build/secp256k1",
+                            "-L<!(pwd)/lib/fc/build",
+                            "-L<!(pwd)/lib/fc/build/secp256k1",
                             "-L/usr/local/lib",
+                            "-L/usr/local/ssl/lib",
+                            "-L/usr/lib/x86_64-linux-gnu",
                             "-lfc",
                             "-lsecp256k1",
                             "-lboost_chrono-mt",
