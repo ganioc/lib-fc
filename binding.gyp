@@ -61,7 +61,7 @@
                         "cflags!": ["-fno-exceptions"],
                         "cflags_cc!": [
                             "-O2",
-                            "-std=gnu++14",
+                            "-std=c++14",
                             "-fno-exceptions",
                             "-Wall"
                         ],
