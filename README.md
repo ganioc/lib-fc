@@ -1,13 +1,13 @@
 # lib-fc
-It's used to provide a Javascript wrapper to EOSIO library fc. For speed acceleration purpose. More API will be included later.
+It's used to provide a Javascript wrapper to facilitate EOS signing function. For speed acceleration purpose. More API will be included later.
 
 ## API available
-- sign(data, privatekey)
-    data: data to be signed, String/Buffer format
-    privatekey: private key to sign, String format
-- sign_k1(data, privatekey)
+- sign(hashdata, privatekey)
+    hashdata: hashed data to be signed, Buffer format
+    privatekey: private key to sign, Buffer format
+- sign_k1(hashdata, privatekey)
   
 
 ## Reference
-- https://github.com/EOSIO/fc.git
+- https://github.com/cryptonomex/secp256k1-zkp.git
   

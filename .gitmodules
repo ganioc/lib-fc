@@ -1,0 +1,3 @@
+[submodule "lib/secp256k1-zkp"]
+	path = lib/secp256k1-zkp
+	url = https://github.com/cryptonomex/secp256k1-zkp.git
