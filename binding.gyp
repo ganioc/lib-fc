@@ -14,7 +14,6 @@
                 "libraries": [
                 ],
                 "ldflags":[
-                    "-static"
                 ]
             },
             "conditions":[
