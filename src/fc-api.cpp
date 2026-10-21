@@ -52,8 +52,20 @@ void Sign_compact(const Nan::FunctionCallbackInfo<v8::Value> &info)
     }
     // it's a Buffer or String
     // std::string str = *Nan::Utf8String(info[0]);
+    if (!node::Buffer::HasInstance(info[0]) || !node::Buffer::HasInstance(info[1]))
+    {
+        Nan::ThrowTypeError("Both arguments must be Buffers");
+        return;
+    }
+
     v8::Local<v8::Object> sha256_buffer = info[0].As<v8::Object>();
     v8::Local<v8::Object> privKey32_buffer = info[1].As<v8::Object>();
+
+    if (node::Buffer::Length(sha256_buffer) != 32 || node::Buffer::Length(privKey32_buffer) != 32)
+    {
+        Nan::ThrowTypeError("Both buffers must be 32 bytes");
+        return;
+    }
 
     const unsigned char *sha256in = (const unsigned char *)node::Buffer::Data(sha256_buffer);
     // v8::Local<v8::Object> msg32_buffer = info[2].As<v8::Object>();
